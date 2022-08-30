@@ -1,20 +1,34 @@
 import React, {Component} from "react";
 import './game.css'
 
-export class Game extends Component<{images: Array<string>}>{
+export class Game extends Component<{gameIMGS: Array<JSX.Element>, evaluateMove: Function}, {images: Array<JSX.Element>}>{
+    constructor(props){
+        super(props)
+        this.state = {
+            images:[]
+        }
+    }
+
+    //useEffect() WITH SCORE IN STATE AS DEPENDENCY VARIABLE
+
+    componentDidMount(){
+    }
     render(): React.ReactNode {
-        let urls = this.props.images
+        let images: Array<JSX.Element> = this.props.gameIMGS
+        let cards: Array<JSX.Element> = []
+        for (let i = 0; i<images.length; i++){
+            cards[i] = 
+                <div key={i} id={i.toString()} className = {'unclicked'} onClick={(e) => this.props.evaluateMove(e)}>
+                    <div className="card">
+                      {images[i]}
+                    </div>
+                </div>
+        }
         return(
-            <div>
-                <img src={urls[0]}/>
-                <img src={urls[1]}/>
-                <img src={urls[2]}/>
-                <img src={urls[3]}/>
-                <img src={urls[4]}/>
-                <img src={urls[5]}/>
-                <img src={urls[6]}/>
-                <img src={urls[7]}/>
+           <div id="cardsContainer">
+                {cards}
             </div>
+
         )
     }
 }
