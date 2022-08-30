@@ -7,7 +7,7 @@ img{
 
 #cardsContainer{
     margin: auto;
-    margin-top: 125px;
+    margin-top: 2%;
     width: 80%;
     height: 500px;
     display: grid;
@@ -22,4 +22,12 @@ img{
     background-color: gainsboro;
     width: 100%;
     height: 100%;
+}
+
+.card:hover{
+    background-color: rgb(68, 68, 68);
+}
+
+.card:active{
+    background-color: white;
 }

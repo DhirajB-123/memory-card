@@ -54,7 +54,6 @@ class App extends Component
     else {
       div = e.nativeEvent.path[2]
     }
-    console.log(div)
     let id: number = div.id
     if (this.state.clicked[id] === false){
       let dummyArray = this.state.clicked
@@ -87,7 +86,7 @@ class App extends Component
     return (
       <div>
         <Header score = {this.state.score} highScore = {this.state.highScore}/>
-        <Game gameIMGS = {this.state.gameIMGS} evaluateMove = {this.evaluateMove}/>
+        <Game gameIMGS = {this.state.gameIMGS} evaluateMove = {this.evaluateMove} score = {this.state.score}/>
       </div>
     );
   }
