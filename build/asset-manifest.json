@@ -1,13 +1,13 @@
 {
-  "files": {
-    "main.css": "/DhirajB-123/memory-card/static/css/main.dc6e984c.css",
-    "main.js": "/DhirajB-123/memory-card/static/js/main.a64e4f7f.js",
-    "index.html": "/DhirajB-123/memory-card/index.html",
-    "main.dc6e984c.css.map": "/DhirajB-123/memory-card/static/css/main.dc6e984c.css.map",
-    "main.a64e4f7f.js.map": "/DhirajB-123/memory-card/static/js/main.a64e4f7f.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.dc6e984c.css",
-    "static/js/main.a64e4f7f.js"
-  ]
+  "main.css": "./static/css/main.db15073e.chunk.css",
+  "main.js": "./static/js/main.a641900f.chunk.js",
+  "main.js.map": "./static/js/main.a641900f.chunk.js.map",
+  "static/js/1.0904f6ef.chunk.js": "./static/js/1.0904f6ef.chunk.js",
+  "static/js/1.0904f6ef.chunk.js.map": "./static/js/1.0904f6ef.chunk.js.map",
+  "runtime~main.js": "./static/js/runtime~main.4a686d48.js",
+  "runtime~main.js.map": "./static/js/runtime~main.4a686d48.js.map",
+  "static/css/main.db15073e.chunk.css.map": "./static/css/main.db15073e.chunk.css.map",
+  "index.html": "./index.html",
+  "precache-manifest.ca1cffb6b970d3b373385136b3768fe1.js": "./precache-manifest.ca1cffb6b970d3b373385136b3768fe1.js",
+  "service-worker.js": "./service-worker.js"
 }

@@ -2,13 +2,12 @@ import React, {Component} from "react";
 import './game.css'
 
 export class Game extends Component<{gameIMGS: Array<JSX.Element>, evaluateMove: Function, score: number},
-  {images: Array<JSX.Element>, cards: Array<JSX.Element>, initial: boolean}>{
+  {images: Array<JSX.Element>, cards: Array<JSX.Element>}>{
     constructor(props){
         super(props)
         this.state = {
             images:[],
-            cards: [],
-            initial: false
+            cards: []
         }
     }
 
@@ -31,6 +30,7 @@ export class Game extends Component<{gameIMGS: Array<JSX.Element>, evaluateMove:
     }
 
     render(): React.ReactNode {
+        console.log('counter')
         let images: Array<JSX.Element> = this.props.gameIMGS
         let cards: Array<JSX.Element> = []
         for (let i = 0; i<images.length; i++){
