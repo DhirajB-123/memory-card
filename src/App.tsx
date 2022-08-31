@@ -1,3 +1,4 @@
+import { render } from '@testing-library/react';
 import React, { Component} from 'react';
 import './App.css';
 
@@ -6,13 +7,13 @@ import { Game } from './components/game.tsx';
 // @ts-ignore
 import { Header } from './components/header.tsx';
 
-class App extends Component 
-<{}, {score: number, urls: Array<string>, gameIMGS: Array<JSX.Element>, clicked: Array<Boolean>, highScore: number}>{
+class App extends Component <{}, {score: number, urls: Array<string>, gameIMGS: Array<JSX.Element>, clicked: Array<Boolean>, highScore: number}>{
+  state: { score: number; urls: string[]; gameIMGS: never[]; clicked: never[]; highScore: number; };
   constructor(props: any){
     super(props)
     this.state = {
       score: 0,
-      urls: ['first'],
+      urls: [],
       gameIMGS: [],
       clicked: [],
       highScore: 0
@@ -35,7 +36,8 @@ class App extends Component
   componentDidMount(){
     this.newImages()
     this.noneClicked()
-  }
+    this.setState({score:0})
+    }
 
   returnGameJSX: Function = function(){
     let urls: any = this.state.urls
