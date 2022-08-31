@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DhirajB-123/memory-card/static/css/main.dc6e984c.css",
+    "main.js": "/DhirajB-123/memory-card/static/js/main.a64e4f7f.js",
+    "index.html": "/DhirajB-123/memory-card/index.html",
+    "main.dc6e984c.css.map": "/DhirajB-123/memory-card/static/css/main.dc6e984c.css.map",
+    "main.a64e4f7f.js.map": "/DhirajB-123/memory-card/static/js/main.a64e4f7f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc6e984c.css",
+    "static/js/main.a64e4f7f.js"
+  ]
+}
