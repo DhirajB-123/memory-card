@@ -40,7 +40,6 @@ class App extends Component <{}, {score: number, urls: Array<string>, gameIMGS: 
     for (let i = 0; i < 8; i++) {
       responseUrls[i] = image.message[i];
     }
-    console.log(responseUrls)
     this.setState({ urls: responseUrls });
     this.returnGameJSX();
   };
@@ -100,7 +99,6 @@ class App extends Component <{}, {score: number, urls: Array<string>, gameIMGS: 
   }
 
   render(): React.ReactNode {
-    console.log('counter-app')
     let score: number = this.state.score
     let highScore: number = this.state.highScore
     let gameIMGS: Array<string> = this.state.gameIMGS

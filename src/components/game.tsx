@@ -12,7 +12,6 @@ export class Game extends Component<{gameIMGS: Array<JSX.Element>, evaluateMove:
     }
 
     shuffleCards(deck: Array<JSX.Element>){
-        console.log(deck)
         let currentIndex: number = deck.length
         let randomIndex: number
         while(currentIndex !== 0 ){
@@ -30,7 +29,6 @@ export class Game extends Component<{gameIMGS: Array<JSX.Element>, evaluateMove:
     }
 
     render(): React.ReactNode {
-        console.log('counter')
         let images: Array<JSX.Element> = this.props.gameIMGS
         let cards: Array<JSX.Element> = []
         for (let i = 0; i<images.length; i++){
