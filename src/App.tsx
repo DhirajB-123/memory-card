@@ -12,7 +12,16 @@ class App extends Component <{}, {score: number, urls: Array<string>, gameIMGS: 
     super(props)
     this.state = {
       score: 0,
-      urls: [],
+      urls:
+      ["https://images.dog.ceo/breeds/spaniel-brittany/n02101388_2888.jpg",
+        "https://images.dog.ceo/breeds/terrier-fox/n02095314_1945.jpg",
+        "https://images.dog.ceo/breeds/dingo/n02115641_3494.jpg",
+        "https://images.dog.ceo/breeds/poodle-standard/n02113799_3695.jpg",
+        "https://images.dog.ceo/breeds/shiba/shiba-8.jpg",
+        "https://images.dog.ceo/breeds/terrier-dandie/n02096437_3925.jpg",
+        "https://images.dog.ceo/breeds/mountain-bernese/n02107683_4649.jpg",
+        "https://images.dog.ceo/breeds/pyrenees/n02111500_1557.jpg"
+      ],
       gameIMGS: [],
       clicked: [],
       highScore: 0
@@ -31,18 +40,18 @@ class App extends Component <{}, {score: number, urls: Array<string>, gameIMGS: 
     for (let i = 0; i < 8; i++) {
       responseUrls[i] = image.message[i];
     }
+    console.log(responseUrls)
     this.setState({ urls: responseUrls });
     this.returnGameJSX();
   };
 
-  //SET VARIABLES AS THE VALUE RETURNED BY THESE FUNCTIONS
-  //SET STATE ONCE FOR ALL THE CHANGES
-  //APP POTENTIALLY MISBEHAVING IN BUILD DUE TO EXCESS RENDERS
+  //REMOVE JSX PROP FROM GAME COMPONENT
+  //INSTEAD PASS IN URLS AS PROP
+  //CREATE CARDS AND STORE IN GAME STATE
   componentDidMount(){
     this.setState({score:0})
     this.noneClicked()
     this.newImages()
-    this.returnGameJSX()
     }
 
   returnGameJSX: Function = function(){
